@@ -1,0 +1,186 @@
+.aboutus{
+    background-image: url(../img/Aboutus/x.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 685px;
+    margin-bottom: 65px;
+    .container{
+        .content{
+            line-height: 2rem;
+            padding-top: 110px;
+            .title{
+                line-height: 3.5rem;
+                h1{
+                    font-size:36px;
+                    font-family: 'PB';
+                    color:#ffde00;
+                    text-transform: uppercase;
+                    letter-spacing: 20px;
+                }
+            }
+            .text{
+                line-height: 2.5rem;
+                padding-top: 30px;
+                p{
+                    font-size:18px;
+                    font-family: 'PL';
+                    color:#dbdbdb;
+                }
+            }
+            .Booknow{
+                display: flex;
+                margin-top: 40px;
+                &_d{
+                    padding: 28px;
+                    background-color:#ffde00;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    p{
+                        font-size:24px;
+                        font-family: 'PE';
+                        color:#000;
+                        text-transform: uppercase;
+                    }
+                }
+                &_text{
+                    width: 100px;
+                    margin-left: 20px;
+                    p{
+                        font-size: 14px;
+                        font-family: 'PR';
+                        color:#dbdbdb;
+                    }
+                }
+            }
+        }
+    }
+}
+// pc large
+@media screen and (max-width:1024px){
+    .aboutus{
+        height: 600px;
+        margin-bottom: 55px;
+        .container{
+            .content{
+                padding-top: 100px;
+                .title{
+                    line-height: 3rem;
+                    h1{
+                        font-size: 32px;
+                        letter-spacing: 15px;
+                    }
+                }
+                .text{
+                    line-height: 2.2rem;
+                    p{
+                        font-size:16px;
+                    }
+                }
+                .Booknow{
+                    margin-top: 35px;
+                    &_d{
+                        padding: 25px;
+                        p{
+                            font-size:22px;
+                        }
+                    }
+                    &_text{
+                        width: 100px;
+                        margin-left: 20px;
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// tablet
+@media only screen and (max-width:991px) and (min-width:500px){
+    .aboutus{
+        height: 470px;
+        margin-bottom: 50px;
+        .container{
+            .content{
+                line-height: 1.5rem;
+                padding-top: 50px;
+                .title{
+                    line-height: 2.5rem;
+                    h1{
+                        font-size:28px;
+                        letter-spacing: 15px;
+                    }
+                }
+                .text{
+                    line-height: 1.5rem;
+                    padding-top: 20px;
+                    p{
+                        font-size:14px;
+                    }
+                }
+                .Booknow{
+                    margin-top: 30px;
+                    &_d{
+                        padding: 20px;
+                        p{
+                            font-size:20px;
+                        }
+                    }
+                    &_text{
+                        width: 100px;
+                        margin-left: 15px;
+                        p{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//mobile
+@media only screen and(max-width:767px) and (min-width:320px){
+    .aboutus{
+        height: 880px;
+        margin-bottom: 50px;
+        .container{
+            .content{
+                line-height: 2rem;
+                padding-top: 50px;
+                .title{
+                    line-height: 2.5rem;
+                    h1{
+                        font-size:28px;
+                        letter-spacing: 20px;
+                    }
+                }
+                .text{
+                    line-height: 2rem;
+                    padding-top: 20px;
+                    p{
+                        font-size:16px;
+                    }
+                }
+                .Booknow{
+                    margin-top: 90px;
+                    &_d{
+                        padding: 20px;
+                        p{
+                            font-size:27px;
+                        }
+                    }
+                    &_text{
+                        width: 100px;
+                        margin-left: 20px;
+                        p{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
