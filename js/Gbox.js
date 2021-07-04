@@ -64,13 +64,29 @@ $(document).ready(function(){
     });
 
 
-    var elem = document.querySelector('.main-carousel');
-    var flkty = new Flickity( elem, {
+    let $carousel2= $('.studio-detail .slide-st');
+    $carousel2.flickity({
     // options
     cellAlign: 'left',
+    wrapAround: true,
     contain: true,
-    pageDots: false
+    pageDots: false,
+    prevNextButtons: false,
+
     });
+
+    let prev_et = ()=>{
+        $('.studio-detail .detail .slide .prev').on( 'click', function() {
+            $("main .studio-detail .slide-st").flickity('previous');
+        });
+    }
+    prev_et();
+    let next_et = ()=>{
+        $('.studio-detail .detail .slide .next').on( 'click', function() {
+            $("main .studio-detail .slide-st").flickity('next');
+        });
+    }
+    next_et();
 
     //menu mb
     let li_hover = $('.menu-mobile ul li');
