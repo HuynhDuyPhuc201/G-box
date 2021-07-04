@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="./dest/flickity.css">
     <link rel="stylesheet" href="./dest/aos.css">
     <link rel="stylesheet" href="./dest/bootstrap-grid.css">
-    <script src='./js/flickity.pkgd.min.js'></script>
-    <script src="./js/fullscreen.js"></script>
     <title>Studio Details</title>
 </head>
 <body class="menumb_over">
@@ -95,51 +93,64 @@
         <!-- details -->
         <div class="studio-detail">
             <div class="container">
-                <a href="./Studio.html">
-                    <div class="backtoAll">
-                        <p>Back to all</p>
-                        <img src="./img/icon/arrow-left.png" alt="">
-                    </div>
-                </a>
-                <div class="carousel carousel-main" data-flickity='{ "fullscreen": true, "lazyLoad": 1 }'>
-                    <div class="carousel-cell">
-                      <img class="carousel-cell-image"
-                        data-flickity-lazyload="./img/StudioDetail/img-1.jpg">
-                    </div>
-                    <div class="carousel-cell">
-                      <img class="carousel-cell-image"
-                        data-flickity-lazyload="./img/StudioDetail/img-2.jpg" />
-                    </div>
-                    <div class="carousel-cell">
-                      <img class="carousel-cell-image"
-                        data-flickity-lazyload="./img/StudioDetail/img-3.jpg" />
-                    </div>
-                  </div>
-                <div class="detail">
-                    <div class="number">
-                        <p>studio</p>
-                        <span>01</span>
-                    </div>
-                    <div class="dimensions">
-                        <h3>dimensions</h3>
-                        <p>18mW × 18mL × 7mH</p>
-                    </div>
-                    <div class="floorplan">
-                        <p>Download FloorPlan</p>
-                        <img src="./img/icon/icon-plan.png" alt="">
-                    </div>
-                    <div class="fullscreen" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view" type="button" aria-label="View full-screen" title="View full-screen">
-                        <p>Full Screen</p>
-                        <img src="./img/icon/fullScreen.png" alt="">
-                    </div>
-                    <div class="slide" class="flickity-button flickity-prev-next-button previous" type="button" aria-label="Previous">
-                        <div class="slide_left slide1">
-                            <img src="./img/icon/arrow-left.png" alt="" class="flickity-button-icon" viewBox="0 0 100 100">
-                            <p>Previous</p>
+                <div class="row">
+                    <a href="./Studio.html" class="col-12 col-md-12 col-lg-12">
+                        <div class="backtoAll">
+                            <p>Back to all</p>
+                            <img src="./img/icon/arrow-left.png" alt="">
                         </div>
-                        <div class="slide_right slide1" class="flickity-button flickity-prev-next-button next" type="button" aria-label="Next">
-                            <p>Next</p>
-                            <img src="./img/icon/arrow-right.png" alt="">
+                    </a>
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <div class="carousel slide-st" data-flickity>
+                            <div class="carousel-cell item-1">
+                                <div class="row">
+                                    <div class="col-12 col-md-12 col-lg-12 item item1">
+                                        <img src="./img/StudioDetail/img-1.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell item-1">
+                                <div class="row">
+                                    <div class="col-12 col-md-12 col-lg-12 item item1">
+                                        <img src="./img/StudioDetail/img-2.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell item-1">
+                                <div class="row">
+                                    <div class="col-12 col-md-12 col-lg-12 item item1">
+                                        <img src="./img/StudioDetail/img-3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail col-12 col-md-12 col-lg-12">
+                        <div class="number">
+                            <p>studio</p>
+                            <span>01</span>
+                        </div>
+                        <div class="dimensions">
+                            <h3>dimensions</h3>
+                            <p>18mW × 18mL × 7mH</p>
+                        </div>
+                        <div class="floorplan">
+                            <p>Download FloorPlan</p>
+                            <img src="./img/icon/icon-plan.png" alt="">
+                        </div>
+                        <div class="fullscreen">
+                            <p>Full Screen</p>
+                            <img src="./img/icon/fullScreen.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <div class="slide_left slide1 prev">
+                                <img src="./img/icon/arrow-left.png" alt="" class="flickity-button-icon" viewBox="0 0 100 100">
+                                <p>Previous</p>
+                            </div>
+                            <div class="slide_right slide1 next">
+                                <p>Next</p>
+                                <img src="./img/icon/arrow-right.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -291,6 +302,8 @@
     </main>
     <script src="./js/aos.js"></script>
     <script src="./js/jquery.js"></script>
+    <script src="./js/fullscreen.js"></script>
+    <script src="./js/flickity.pkgd.min.js"></script>
     <script src="./js/Gbox.js"></script>
 </body>
 </html>
