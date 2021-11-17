@@ -1,0 +1,93 @@
+// css navigator (Menu)
+
+// menu-pc
+.menu{
+    position:relative;
+    ul{
+        @include flex-between;
+        li{
+            padding: 37px 30px 17px;
+            a{
+                @include text(var(--body12-fs), 'PS', null, $black-cl, uppercase);
+                position: relative;
+                &::after{
+                    @include line(0, 1.5px ,$black-cl);
+                    right: 0;
+                    bottom:-8px;
+                    @include transition(all .3s);
+                }
+                &:hover{
+                    &::after{
+                        left: 0;
+                        width: 100%;
+                        @include transition(all .3s);
+                    }
+                }
+            }
+        }
+        .li{
+            padding: 37px 0 17px;
+        }
+    }
+    &-mid{
+        @include flex-between;
+    }
+    &::after{
+        @include line(100%, 1px ,$black-cl);
+    }
+    @include sm{
+        display: none;
+    }
+    @include xs{
+        display: none;
+    }
+}
+// menu mobile
+.menuMobile{
+    @include size(100%, 100vh);
+    @include transform(translateX(-100%));
+    transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86),border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    background-color: $gray-cl;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    ul{
+        text-align: center;
+        margin-top: 90px;
+        li{
+            padding: 20px;
+            position: relative;
+            @include transition(all .3s);
+            a{
+                @include text(var(--body18-fs), 'PB', null, $yellow-cl, uppercase);
+                position: relative;
+                &::after{
+                    @include line(0%, 1.5px, $yellow-cl);
+                    right:0;
+                    left:0;
+                    bottom:-5px;
+                    margin: auto;
+                    @include transition(all .3s);
+                }
+                &:hover{
+                    &::after{
+                        width: 100%;
+                        @include transition(all .3s);
+                    }
+                }
+            }
+        }
+        .li_active{
+            opacity: 0.3;
+            @include transition(all .3s);
+        }
+    }
+}
+.active{
+    @include transform(translateX(0%));
+    transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86),border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    pointer-events: auto;
+}
+
+

@@ -1,0 +1,86 @@
+.contact{
+    background-image: url(../img/Contact/Untitled-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 96px 0 17px 0;
+    &__title{
+        text-align: center;
+        svg{
+            @include size(105px, 130px);
+        }
+    }
+    &__d{
+        @include mid(true);
+        padding-top: 40px;
+        p{
+            @include text(var(--body12-fs), 'PR', 3rem, #f1f1f1, uppercase);
+        }
+        .left{
+            text-align: right;
+            padding-right: 25px;
+        }
+        .right{
+            text-align: left;
+            padding-left: 25px;
+        }
+    }
+    &__icon{
+        text-align:center;
+        margin-top: 60px;
+        cursor: pointer;
+        animation: mouse 1s infinite ease-in-out;
+    }
+    @keyframes mouse{
+        from{
+            @include transform(translateY(0));
+            @include transition(transform .3s);
+        }
+        to{
+            @include transform(translateY(10px));
+            @include transition(transform .3s);
+        }
+    }
+
+    @include xs{
+        padding: 123px 0 132px 0;
+        &__title{
+            display: none;
+        }
+        &__d{
+            flex-direction: column;
+            padding-top: 0;
+           .left, .right{
+               text-align: center;
+               padding: 0px;
+           }
+        }
+        &__icon{
+            display: none;
+        }
+    }
+}
+
+.contactFooter{
+    position:relative;
+    &::after{
+        @include line(100%, 100%, #ffde00);
+        top: 0%;
+        z-index: 2;    
+    }
+    .left{
+        padding-top: 40px;
+    }
+    form{
+        padding-top: 15px;
+    }
+    .backtoTop{
+        padding-bottom: 123px;
+    }
+    @include xs{
+        .backtoTop{
+            margin-top: 40px;
+        }
+    }
+}

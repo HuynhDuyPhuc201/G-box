@@ -1,0 +1,104 @@
+// css footer
+
+// footer
+
+footer{
+    position: relative;
+    --pd: 10px 0 40px 0;
+    p, label{
+        @include text(var(--body12-fs), 'PR',3rem , $black-cl, uppercase);
+    }
+    label{
+        text-transform:inherit;
+    }
+    .container{
+        position: relative;
+        z-index: 20;
+    }
+    .left{
+        .tel{
+            display: inline-flex;
+            padding: var(--pd);
+        }
+    }
+    .right{
+        p{
+            max-width: 215px;
+        }
+        .login{
+            padding-top: 25px;
+        }
+        .submit{
+            position: absolute;
+            bottom: 0;
+            right: 15px;
+            button{
+                @include text(1rem, 'PB',null, $white-cl, uppercase);
+                cursor: pointer;
+                padding: 5px 10px;
+                border: none;
+                background-color: #000;
+            }
+        }
+    }
+    &::after{
+        @include line(100%, 100%, $yellow-cl);
+        top: 25%;
+        z-index: 2;
+    }
+    @include xs{
+        --pd: 0;
+        .row{
+            text-align: center;
+        }
+        .right{
+            display: none;
+        }
+        &::after{
+            top: 65%;
+        }
+    }
+}
+
+form{
+    padding-top: 30px;
+}
+footer .row .info .tel p:first-child {
+    margin-right: 30px;
+}
+
+form input, form textarea{
+    border: none;
+    margin-top: 5px;
+    background: transparent;
+    border-bottom: 1px solid #000;
+    resize: none;
+    width: 100%;
+    outline: none;
+}
+.error{
+    border-bottom: 1px solid red;
+}
+.backtoTop{
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 65px;
+    &_img{
+        padding-bottom: 15px;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover{
+            transform: translateY(10px);
+            transition: all .3s;
+        }
+    }
+    p{
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    @include xs{
+        margin-top: 75px;
+    }
+}

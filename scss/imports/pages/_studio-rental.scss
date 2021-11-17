@@ -1,0 +1,249 @@
+
+.details{
+    .rental{
+        background-color: $gray-cl;
+        height: 640px;
+        &_item{
+            padding-top: 75px;
+            .number{
+                background-color: $yellow-cl;
+                display: inline-flex;
+                min-width: 120px;
+                height: 120px;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                p{
+                    @include text(1.1rem, 'PR', null, $black-cl, uppercase);
+                }
+                span{
+                    @include text(var(--number-fs), 'DB', null, $black-cl, none);
+                }
+            }
+            .text{
+                padding-top: 30px;
+                h2{
+                    @include text(3.2rem, 'PE', null, $white-cl, none);
+                }
+                p{
+                    @include text(var(--body12-fs), 'PR', null, $white-cl, none);
+                }
+            }
+        }
+    }
+    @media (max-width: 450px){
+        .rental{
+            height: auto;
+            background:none;
+            &_item{
+                padding-top: 32px;
+                    @include flex-between;
+                .number{
+                    width: 105px;
+                    height: 105px;
+                    p{
+                        @include text(1.2rem, 'PR', null, $black-cl, uppercase);
+                    }
+                    span{
+                        font-size:6.3rem;
+                    }
+                }
+                .text{
+                    padding-top: 0;
+                    h2,p{
+                        color: $black-cl;
+                    }
+                    p{
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+    @include xs{
+        .companybooking .row-right1{
+            margin-left: 0;
+            margin-right:0;
+        }
+    }
+}
+
+.career{
+    display: none;
+    text-align: center;
+    padding: 40px 10px 40px;
+    &__d{
+        h3{
+            @include text(var(--body14-fs), 'PL', null, $black-cl, uppercase);
+        }
+        p{
+            padding-top: 27px;
+            @include text(var(--body12-fs), 'PR', 2rem, $black-cl, none);
+        }
+    }
+    @include xs{
+        display: block;
+    }
+}
+
+
+.companybooking{
+    padding: 73px 0 0 0;
+    .row-right1{
+        margin-left: 30px;
+    }
+    &_company{
+        .title{
+            padding-left: 20px;
+            h2{
+                @include text(2.8rem, 'PE', null, $black-cl, none);
+            }
+        }
+    }
+    &_form{
+        .login{
+            margin-top: 25px;
+            label{
+                @include text(var(--body12-fs), 'PR', null, $black-cl, none);
+            }
+            input{
+                border: none;
+                margin-top: 5px;
+                background: transparent;
+                border-bottom: 1px solid #000;
+                width: 100%;
+                outline: none;
+            }
+            textarea{
+                resize: none;
+                background: transparent;
+                margin-top: 21px;
+                border: 1px solid #000;
+                width: 100%;
+                outline: none;
+            }
+        }
+    }
+    &_booking{
+        margin-top: 38px;
+        h2{
+            @include text(2.8rem, 'PE', null, $black-cl, none);
+        }
+        p{
+            @include text(var(--body12-fs), 'PR', null, $black-cl, none);
+            padding-top: 25px;
+        }
+        &-form{
+            .login{
+                label, p{
+                    @include text(var(--body12-fs), 'PR', null, $black-cl, none);
+                }
+                textarea{
+                    resize: none;
+                    background: transparent;
+                    margin-top: 21px;
+                    width: 100%;
+                    outline: none;
+                }
+                input{
+                    background: transparent;
+                    @include size(100%, 38px);
+                    padding-left: 10px;
+                    border: none;
+                    border-bottom: 1px solid #000;
+                    resize: none;
+                    outline: none;
+                    margin-top: 20px;
+                }
+                .boder-all{
+                    @include br(1px solid #000);
+                }
+                #subject1{
+                    margin-top: 38px;
+                }
+            }
+        }
+    }
+    &_numberSmall{
+        margin: 20px 0 30px 0;
+        .numberSmall{
+            cursor: pointer;
+            background-color: #111111;
+            margin-right: 18px;
+            width: 38px;
+            height: 38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #000;
+            transition: all .3s;
+            span{
+                @include text(2.4rem, 'DB', null, #b4b4b4, none);
+                @include transition(all .3s);
+            }
+            &:hover{
+                background-color: $yellow-cl;
+                @include transition(all .3s);
+                span{
+                    color: $black-cl;
+                    @include transition(all .3s);
+                }
+            }
+        }
+    }
+
+}
+.after-arrow{
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 69%;
+        right: -2%;
+        width: 13px;
+        height: 13px;
+        background-image: url(../img/icon/right-arrow.svg);
+    }
+}
+.input1{
+    margin-top: 30px;
+    .login{
+        label{
+            @include text(var(--body12-fs), 'PR', null, $black-cl, none);
+        }
+        input{
+            background: transparent;
+            outline: none;
+            @include size(100%, 38px);
+            border: none;
+            margin-top: 20px;
+        }
+        .boder-all{
+            border: 1px solid #000;
+        }
+    }
+}
+.submit1{
+    display: flex;
+    align-items: center;
+    .text{
+        min-width: 100px;
+        background-color: #525355;
+        border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+        height: 100px;
+        justify-content: center;
+        margin-top: 68px;
+        cursor: pointer;
+        p{
+            @include text(2rem, 'PE', null, $yellow-cl, uppercase);
+        }
+    }
+    .note{
+        padding-left: 20px;
+        p{
+            @include text(1.2rem, 'PR', null, $black-cl, none);
+        }
+    }
+}
