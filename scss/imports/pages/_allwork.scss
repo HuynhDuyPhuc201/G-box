@@ -1,0 +1,15 @@
+.allwork{
+    &__tab{
+        padding: 68px 0 30px;
+    }
+    .active{
+        display: grid;
+    }
+    @include xs{
+        &__tab{
+            padding: 50px 0;
+            display: block;
+        }
+    }
+}
+

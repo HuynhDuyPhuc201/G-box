@@ -1,0 +1,157 @@
+
+.gbox{
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    &__des{
+        span{
+            @include text(var(--body14-fs), 'PL', null, $black-cl, uppercase);
+            letter-spacing: 2px;
+        }
+        h1{
+            @include text(var(--body20-fs), 'PB', null, $gray-cl, uppercase);
+            background-color: $yellow-cl;
+            display: inline-block;
+            letter-spacing: 5px;
+            margin: 25px 0;
+        }
+        p{
+            @include text(var(--body12-fs), 'PR', 2rem, $black-cl, none);
+            max-width: 745px;
+            margin: auto;
+        }
+        @include xs{
+            .text{
+                display: none;
+            }
+        }
+    }
+    &::after{
+        @include line(320px, 1px, $black-cl);
+        left: 50%;
+        bottom: 0;
+        @include transform(translateX(-50%));
+    }   
+    @include xs{
+        padding: 60px 0 0 0;
+        &::after{
+            content: none;
+        }
+    }
+}
+
+.project{
+    --pdtop: 65px;
+    &__tab{
+        text-align: center;
+        padding: 48px 0 20px;
+        ul{
+            display:inline-flex;
+            li{
+                padding: 0 20px;
+                a{
+                    @include text(var(--body12-fs), 'PS', null, #898989, uppercase);
+                    @include transition(all .3s);
+                }
+                &:hover{
+                    a{
+                        @include transition(all .3s);
+                        color: $black-cl;
+                    }
+                }
+            }
+            .active{
+                a{
+                    color: $black-cl;
+                }
+            }
+        }
+    }
+    &__wrap{
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0 20px;
+        text-align: center;
+        &-item{
+            .img{
+                overflow: hidden;
+                cursor: pointer;
+                max-width: 313px;
+                max-height: 189px;
+                margin: auto;
+                img{
+                    @include transition(all .4s);
+                    @include img;
+                }
+                &:hover{
+                    img{
+                        @include transform(scale(1.1));
+                        @include transition(all .4s);
+                    }
+                }
+            }
+            .text{
+                text-align: center;
+                padding-top: 30px;
+                h5{
+                    @include text(var(--body12-fs), 'PB', 3rem, $black-cl, uppercase);
+                    position: relative;
+                    &::after{
+                        @include line(16px, 3px, $yellow-cl);
+                        left: 50%;
+                        bottom: 0;
+                        @include transform(translateX(-50%));
+                    }
+                }
+                p{
+                    @include text(var(--body12-fs), 'PR', 2rem, $black-cl, none)
+                }
+            }
+        }
+        .item1{
+            padding-top: var(--pdtop);
+        }
+    }
+    .active{
+        display: grid;
+    }
+    &__allwork{
+        cursor: pointer;
+        @include mid(true);
+        padding-top: 75px;
+        a{
+            @include text(var(--body12-fs), 'PS', null, $black-cl, uppercase);
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            img{
+                padding-top: 10px;
+                @include transition(all $t);
+                width:15px;
+            }
+            &:hover{
+                img{
+                    @include transition(all $t);
+                    @include transform(translateY(5px));
+                }
+            }
+        }
+    }
+    @include sm{
+        --pdtop: 0;
+        &__wrap{
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px 20px;
+        }
+    }
+    @include xs{
+        &__tab{
+            display: none;
+        }
+        &__wrap{
+            grid-template-columns: 1fr;
+            grid-gap: 45px 20px;
+        }
+    }
+}
+
